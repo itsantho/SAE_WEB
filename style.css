@@ -1,65 +1,111 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
 }
 
-body{
+body {
     font-family: 'Arial';
 }
 
-header {
-    height: 100vh;
-    width: 100vw;
-    background-image: url(FondBleu.jpg); /* image de fond */
-    background-size: cover; /*couvre tout*/
+header{
+    margin: 30px;
 }
 
-.navbar{
-    position: absolute;
+.navbar {
     padding: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* Pour que les elements de la nav bar soit alignés avec le logo*/
+    justify-content: space-evenly;
+    align-items: center; /* Pour que les éléments de la nav bar soient alignés avec le logo */
     width: 100%;
     box-sizing: border-box;
 }
 
-.navbar a{
-    color: #c7bfe1;
+.navbar a {
+    color: #000;
 }
 
-.navbar .logo{
+.navbar .logo {
     font-size: 2em;
-    font-weight: bold; /*mettre ASFC en + gros*/
+    font-weight: bold; /* Mettre ASFC en plus gros */
 }
 
-.navbar .nav-links ul{
-    display: flex; /*aligner les element du menu*/
+
+.navbar .nav-links ul {
+    display: flex; /* Aligner les éléments du menu */
 }
 
-.navbar .nav-links ul li{
-    margin:0 20px; /* Espace entre les éléments du menu*/
+.navbar .nav-links ul li {
+    margin: 0 20px; /* Espace entre les éléments du menu */
+    position: relative; /* Nécessaire pour positionner le sous-menu */
 }
 
-.navbar .nav-links ul li.acceuil a{
-    color: #37bfd1; /*pour mettre l'acceuile en plus large et avec une couleur mieux visible*/
+.navbar .nav-links ul li.acceuil a {
+    color: #37bfd1; /* Pour mettre l'accueil en plus large et avec une couleur mieux visible */
     font-weight: 700;
 }
 
-.navbar .menu-burger{
+.nav-links ul li a:hover{
+    color: #37bfd1;
+}
+
+.navbar .menu-burger {
     display: none;
     position: absolute;
     top: 30px;
     right: 40px;
-    width: 35px; /*Réduire la taille du menu burger (lorsque l'ecran est trop petit*/
+    width: 35px; /* Réduire la taille du menu burger */
 }
 
-@media screen and (max-width: 900px){
-    .navbar .menu-burger{
-        display: block; /*met le menu burger quand on est sur tel*/
+/* Styles pour le sous-menu */
+.navbar ul li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-menu {
+    position: absolute;
+    flex-direction: column;
+    top: 100%; /* Positionne le sous-menu en dessous de l'élément parent */
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f9f9f9;
+    list-style-type: none;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.sub-menu li {
+    padding: 8px 12px;
+}
+
+.sub-menu li:hover {
+    cursor: pointer;
+    color: #37bfd1;
+}
+
+.banner{
+    height: 148px;
+    background: linear-gradient(to bottom, #30287e, #3ea6af);
+}
+.banner-container{
+    display: flex;
+    padding-top: 48px;
+    padding-left: 348px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f9f9f9;
+}
+
+/* Mobile menu styles */
+@media screen and (max-width: 900px) {
+    .navbar .menu-burger {
+        display: block; /* Met le menu burger quand on est sur mobile */
     }
+
     .nav-links {
         top: 0;
         left: 0;
@@ -67,26 +113,34 @@ header {
         background-color: rgba(255, 255, 255, 0.24);
         backdrop-filter: blur(7px);
         width: 100%;
-        height: 100vh;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: -100%; /*Cacher menu avant le clic*/
-        transition: all 0.5s ease; /*Transition*/
+        margin-left: -100%; /* Cacher menu avant le clic */
+        transition: all 0.5s ease; /* Transition */
     }
 
-    .nav-links.mobile-menu{
-        margin-left: 0; /*met le menu au centre pour l'afficher (retire le margin)*/
+    .nav-links.mobile-menu {
+        margin-left: 0; /* Affiche le menu en retirant le margin */
     }
 
-    .nav-links ul{
+    .nav-links ul {
         display: flex;
         flex-direction: column;
-        align-items: center;
+
     }
 
-    .navbar .nav-links ul li{
+    .navbar .nav-links ul li {
         margin: 25px 0;
         font-size: 1.2em;
+    }
+
+    .sub-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: none;
     }
 }
