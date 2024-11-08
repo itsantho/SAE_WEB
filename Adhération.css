@@ -40,31 +40,42 @@
 .banner{
     background-image: url("images/FondBleu.jpg");
     background-size: cover;
+    /*background-color: #CDE7F4;
+    //Pour mettre la couleur du fond de dons comme sur la maquette
+    */
+}
+
+.banner-don{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: #CDE7F4;
+    justify-content: space-between; /* Espace entre le texte et l'image */
+    align-items: center; /* Centre verticalement */
 }
 
 .banner-container{
-    margin: 50px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #f9f9f9;
-    text-align: center;
+ margin: 50px;
+ font-size: 40px;
+ font-weight: bold;
+ color: #3133f1;
+    text-align: left;
 }
 
-.banner-paragraph{
-    font-style: italic;
-    text-align: center;
-    color: white;
-    padding-bottom: 25px;
+.banner-image{
+    width: 400px; /* Ajuste la taille de l'image selon tes besoins */
+    height: auto; /* Garde le ratio d'aspect de l'image */
+    margin-left: 20px; /* Espace entre le texte et l'image */
 }
 
 body {
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
+ font-family: var(--body-font);
+ font-size: var(--normal-font-size);
 }
 
 ul {
-    list-style: none;
-    /* Color highlighting when pressed on mobile devices */
+ list-style: none;
+ /* Color highlighting when pressed on mobile devices */
     /*-webkit-tap-highlight-color: transparent;*/
 }
 
@@ -148,15 +159,23 @@ a {
     .banner{
         background-size: cover;
     }
+
+    .banner-don{
+        flex-direction: column;
+        align-items: center;
+    }
     .banner-container{
         font-size: 35px;
         font-weight: bold;
-        color: #f9f9f9;
+        color: #3133f1;
         text-align: center;
     }
 
-    .banner-paragraph{
-        font-size: 15px;
+    .banner-image{
+        margin-left: 0; /* Supprime la marge gauche sur petit écran */
+        margin-top: 0px; /* Ajoute un espace entre le texte et l'image */
+        width: 100%; /* Laisse l'image s'adapter à la largeur de l'écran */
+        max-width: 300px; /* Limite la taille maximale de l'image */
     }
 
     .nav__menu {
