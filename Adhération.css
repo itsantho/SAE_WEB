@@ -3,6 +3,7 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
+
     --header-height: 3.5rem;
 
     /*========== Colors ==========*/
@@ -151,6 +152,93 @@ a {
 
 .nav__close {
     opacity: 0;
+}
+
+/* === Slider ===*/
+.slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.slider img{
+    width: 100%;
+    display: none;
+}
+
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider button{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    padding: 10px 15px;
+    background-color: rgba(0,0,0,0.0) ;
+    color: darkslateblue;
+    border: none;
+    cursor: pointer;
+}
+
+.previous{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+
+@keyframes fade {
+    from {opacity: 0.5}
+    to {opacity: 1}
+}
+
+/* Partie dons sous le slider*/
+
+.donsbox {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes de taille égale */
+    width: 100%;
+    padding: 2%; /* Ajuste la marge interne selon tes besoins */
+    background-image: url("images/fondDons.png");
+}
+.texteDon{
+    padding-right: 20px;
+    text-align: center;
+}
+.texteDon h1{
+    margin-bottom: 5%;
+}
+.texteDon button{
+    margin: 0 auto; /* Centre le bouton horizontalement */
+    margin-top: 30px;
+    align-items: center;
+    font-family: var(--body-font); /* Utilise la variable de police */
+    border-radius: 15px; /* Bord arrondi, ajuste la valeur pour plus ou moins de courbure */
+    padding: 10px 20px; /* Ajuste le remplissage interne */
+    border: none; /* Enlève la bordure par défaut */
+    background-color: #007BFF; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    cursor: pointer; /* Change le curseur en une main */
+}
+
+.texteDon button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+.imageDon {
+    display: flex;
+    justify-content: flex-end; /* Place l'image à droite */
+    align-items: flex-start; /* Aligne l'image en haut */
+}
+.imageDon img{
+    max-width: 50%; /* Ajuste selon tes besoins */
+    height: auto;
 }
 
 /* Navigation for mobile devices */
