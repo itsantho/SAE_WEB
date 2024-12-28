@@ -9,7 +9,7 @@
 
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="css/test.css">
+  <link rel="stylesheet" href="Acceuil.css">
 
   <title>Page d'accueil</title>
 </head>
@@ -134,44 +134,16 @@
 <div>
   <h2 class="carrousel_title">Les actualités : </h2>
 
-  <div class="container_slider swiper">
-    <div class="card_contenu">
-      <ul class="card_list swiper-wrapper">
-        <li class="card_item swiper-slide">
-          <a href="" class="card_lien">
-            <p class="text">ACTUALITE ICI </p>
-          </a>
-        </li>
-
-        <li class="card_item swiper-slide">
-          <a href="" class="card_lien">
-            <p class="text">ACTUALITE ICI </p>
-          </a>
-        </li>
-
-        <li class="card_item swiper-slide">
-          <a href="" class="card_lien">
-            <p class="text">ACTUALITE ICI </p>
-          </a>
-        </li>
-
-        <li class="card_item swiper-slide">
-          <a href="" class="card_lien">
-            <p class="text">ACTUALITE ICI </p>
-          </a>
-        </li>
-
-        <li class="card_item swiper-slide">
-          <a href="" class="card_lien">
-            <p class="text">ACTUALITE ICI </p>
-          </a>
-        </li>
-      </ul>
-
-      <div class="swiper-pagination"></div>
-      <div class="swiper-slide-button swiper-button-prev"></div>
-      <div class="swiper-slide-button swiper-button-next"></div>
+  <div class="slider">
+    <div class="slides">
+      <img class = "slide" src="images/SlideFatigue1.png" alt="image #1">
+      <img class = "slide" src="images/Slide 2 Fatigue Chronique.png" alt="image #2">
+      <img class = "slide" src="images/Slide 3 Fatigue Chronique.png" alt="image #3">
+      <img class = "slide" src="images/Slide 4 Fatigue Chronique.png" alt="image #4">
+      <img class = "slide" src="images/Slide 5 Fatigue Chronique.png" alt="image #5">
     </div>
+    <button class="prev" onclick="prevSlide()" >&#10094</button>
+    <button class="next" onclick="nextSlide()" >&#10095</button>
   </div>
 </div>
 </section>
