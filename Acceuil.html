@@ -1,22 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="Acceuil.css">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/Accueil.css">
+
+  <title>Page d'accueil</title>
 </head>
+
 <body>
-<div class="slider">
-    <div class="slides">
-        <img class = "slide" src="images/SlideFatigue1.png" alt="image #1">
-        <img class = "slide" src="images/Slide 2 Fatigue Chronique.png" alt="image #2">
-        <img class = "slide" src="images/Slide 3 Fatigue Chronique.png" alt="image #3">
-        <img class = "slide" src="images/Slide 4 Fatigue Chronique.png" alt="image #4">
-        <img class = "slide" src="images/Slide 5 Fatigue Chronique.png" alt="image #5">
-    </div>
-    <button class="prev" onclick="prevSlide()" >&#10094</button>
-    <button class="next" onclick="nextSlide()" >&#10095</button>
+<!--=============== HEADER & NAV ===============-->
+<header class="header">
+  <div class="nav_background">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="#" class="nav__logo">ASFC</a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class=""><a href="#" class="nav__link">ACCUEIL</a></li>
+
+          <li class="dropdown__item">
+            <div class="nav__link">
+              A PROPOS <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <ul class="dropdown__menu">
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-user-heart-fill"></i> Qui sommes-nous ?
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-information-line"></i> Le SFC, la maladie
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-brain-line"></i> La douleur chronique
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-input-method-line"></i> Pacing
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="dropdown__item">
+            <div class="nav__link">
+              AIDE & RESSOURCES <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <ul class="dropdown__menu">
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-article-line"></i> Documentation
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-draft-fill"></i> Démarches administratives
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-link"></i> Liens utiles
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-road-map-line"></i> Plan du site
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown__item">
+            <div class="nav__link">
+              ACTUALITES & EVENEMENTS <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <ul class="dropdown__menu">
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-book-read-line"></i> Actualités
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-calendar-2-line"></i> Agenda
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="#" class="nav__link">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="banner">
+  <div class="banner-container">
+    <h1 class="page_title"> Association Française<br> du<br> Syndrome de Fatigue Chronique </h1>
+  </div>
 </div>
-<script src="Acceuil.js"></script>
+<div class="slider">
+  <div class="slides">
+    <img class = "slide" src="images/SlideFatigue1.png" alt="image #1">
+    <img class = "slide" src="images/Slide_2_Fatigue_Chronique.png" alt="image #2">
+    <img class = "slide" src="images/Slide_3_Fatigue_Chronique.png" alt="image #3">
+    <img class = "slide" src="images/Slide_4_Fatigue_Chronique.png" alt="image #4">
+    <img class = "slide" src="images/Slide_5_Fatigue_Chronique.png" alt="image #5">
+  </div>
+  <button class="prev" onclick="prevSlide()" >&#10094</button>
+  <button class="next" onclick="nextSlide()" >&#10095</button>
+</div>
+
+<section>
+  <h2>Qui sommes-nous ?</h2>
+  <div class="container_1">
+    <div class="container_2">
+      <p>L'ASFC est à l'origine de la journée nationale des fatigues, qui se tient tous les 2 ans. <br><br>
+      L'Association Française du Syndrome de Fatigue Chronique est une association loi de 1901 à but non lucratif, créée en 1998 etagréée au niveau national par le Ministère de la solidarité et de la Santé, depuis 2010, pour représenter les usagers du système de santé.
+      <br><br>
+      Elle est membre d'<strong>ALLIANCE MALADIES RARES (AMR)</strong>, et des Assos Santé . Elle a été reconnue d'Intérêt Généralet à ce titre peut recevoir des dons .
+      <br><br> Notre association a un statut national mais possède également des <strong>délégations régionales</strong>  qui accueillent les malades souhaitant une information.
+      <br><br> L'ASFC collabore au développement d'une solution thérapeutique avec une PME innovante spécialisée en médecine basée sur les mécanismes : Bio-Modeling Systems</p>
+    </div>
+    <div class="map">
+    <img src="images/map_asfc.png">
+  </div>
+  </div>
+</section>
+
+<section>
+  <div>
+    <h2 class="carrousel_title">Les actualités : </h2>
+
+    <div class="container_slider swiper">
+      <div class="card_contenu">
+        <ul class="card_list swiper-wrapper">
+          <li class="card_item swiper-slide">
+            <a href="" class="card_lien">
+              <p class="text">ACTUALITE ICI </p>
+            </a>
+          </li>
+
+          <li class="card_item swiper-slide">
+            <a href="" class="card_lien">
+              <p class="text">ACTUALITE ICI </p>
+            </a>
+          </li>
+
+          <li class="card_item swiper-slide">
+            <a href="" class="card_lien">
+              <p class="text">ACTUALITE ICI </p>
+            </a>
+          </li>
+
+          <li class="card_item swiper-slide">
+            <a href="" class="card_lien">
+              <p class="text">ACTUALITE ICI </p>
+            </a>
+          </li>
+
+          <li class="card_item swiper-slide">
+            <a href="" class="card_lien">
+              <p class="text">ACTUALITE ICI </p>
+            </a>
+          </li>
+        </ul>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="join_links">
+
+    <h2>La fatigue, c’est naturel. <br>
+      L’Epuisement intense, NON !</h2>
+    <h1>Rejoignez-nous</h1>
+
+  </div>
+  <div class="button_links">
+    <button>Faire un don</button>
+    <button>Adhérer</button>
+  </div>
+</section>
+<footer>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3><i class="ri-phone-fill"></i> Téléphone</h3>
+        <p>-Bernard 03 27 27 44 99 Lundi de 14 / 16 h</p> <br>
+        <p>-Isy 06 49 55 25 10 Mercredi de 14 / 17 h</p> <br>
+        <p>-Robert 06 37 01 14 93 Mardi de 14 / 17 h</p> <br>
+        <p>-Arnaud 06 40 13 98 81 Vendredi de 16 / 18 h</p>
+      </div>
+      <div class="footer-column">
+        <h3><i class="ri-mail-fill"></i> Courrier</h3>
+        <p>boîte contact ASFC: contact@asso-sfc.org</p>
+      </div>
+      <div class="footer-column">
+        <h3> <i class="ri-map-pin-fill"></i> Adresse</h3>
+        <p>19 rue Wicardenne - 62200 BOULOGNE SUR MER</p>
+      </div>
+    </div>
+    <p class="footer-credits">
+      Copyright ASFC ©2012-2024 <a href="#">mentions légales</a>
+    </p>
+  </footer>
+
+  <p>Copyright ASFC ©2012-2024</p>
+</footer>
+
+
+<!--=============== JS ===============-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="Accueil.js"></script>
 </body>
-</html>
+</html></html>
