@@ -9,7 +9,7 @@
 
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="Accueil.css">
+  <link rel="stylesheet" href="css/test.css">
 
   <title>Page d'accueil</title>
 </head>
@@ -30,7 +30,7 @@
 
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <li class=""><a href="Accueil.html" class="nav__link">ACCUEIL</a></li>
+          <li class=""><a href="#" class="nav__link">ACCUEIL</a></li>
 
           <li class="dropdown__item">
             <div class="nav__link">
@@ -39,7 +39,7 @@
 
             <ul class="dropdown__menu">
               <li>
-                <a href="#qui-sommes-nous" class="dropdown__link">
+                <a href="#" class="dropdown__link">
                   <i class="ri-user-heart-fill"></i> Qui sommes-nous ?
                 </a>
               </li>
@@ -104,7 +104,7 @@
 
             <ul class="dropdown__menu">
               <li>
-                <a href="#actu" class="dropdown__link">
+                <a href="#" class="dropdown__link">
                   <i class="ri-book-read-line"></i> Actualités
                 </a>
               </li>
@@ -117,7 +117,7 @@
             </ul>
           </li>
 
-          <li><a href="#footer" class="nav__link">CONTACT</a></li>
+          <li><a href="#" class="nav__link">CONTACT</a></li>
         </ul>
       </div>
     </nav>
@@ -141,7 +141,7 @@
   <button class="next" onclick="nextSlide()" >&#10095</button>
 </div>
 
-<section id="qui-sommes-nous">
+<section>
   <h2>Qui sommes-nous ?</h2>
   <div class="container_1">
     <div class="container_2">
@@ -158,7 +158,7 @@
   </div>
 </section>
 
-<section id="actu">
+<section class="actualite">
   <div>
     <h2 class="carrousel_title">Les actualités : </h2>
 
@@ -204,25 +204,25 @@
   </div>
 </section>
 
-<section>
+<section class="join">
   <div class="join_links">
 
     <h2>La fatigue, c’est naturel. <br>
-      L’Epuisement intense, NON !</h2>
-    <h1>Rejoignez-nous</h1>
+      L’Epuisement intense, NON !
+    <br><br>
+      Rejoignez-nous
+    </h2>
 
   </div>
   <div class="button_links">
-    <a href="Dons.html">
-      <button>Faire un don</button>
-    </a>
-    <a href="Adhération.html">
-      <button>Adhérer</button>
-    </a>
+    <button>Faire un don</button>
+    <a href="../Adhésion.html"><button>Adhérer</button></a>
   </div>
 </section>
 
-<footer id="footer">
+
+<footer>
+  <footer>
     <div class="footer-container">
       <div class="footer-column">
         <h3><i class="ri-phone-fill"></i> Téléphone</h3>
@@ -243,9 +243,10 @@
     <p class="footer-credits">
       Copyright ASFC ©2012-2024 <a href="#">mentions légales</a>
     </p>
+  </footer>
+
+  <p>Copyright ASFC ©2012-2024</p>
 </footer>
-
-
 
 
 <!--=============== JS ===============-->
