@@ -48,11 +48,11 @@ new Swiper('.card_contenu', {
         },
 
         768:{
-            slidesPerView:2
+            slidesPerView:3
         },
 
         1024:{
-            slidesPerView:3
+            slidesPerView:4
         },
     }
 });
