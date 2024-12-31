@@ -80,6 +80,7 @@ section h2{
     font-size: 4em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 1em;
 }
 
 .container_1 {
@@ -87,12 +88,10 @@ section h2{
     flex-direction: row;
     align-items: center;
     justify-content:space-between;
-    border: solid;
 }
 
 .container_2 {
     width:60%;
-    border: solid;
     padding: 2em;
 }
 
@@ -108,8 +107,9 @@ section h2{
 
 }
 .map img{
-    width: 80%;
+    width: 60%;
 }
+
 /*=============== NAV ===============*/
 .nav {
     height: var(--header-height);
@@ -165,9 +165,8 @@ section h2{
 .slider{
     position: relative;
     width: 100%;
-    margin: auto;
-    margin-top: 50px;
     overflow: hidden;
+    margin-bottom: 1em;
 }
 
 .slider img{
@@ -212,6 +211,7 @@ img.displaySlide{
     background: linear-gradient(45deg, #3EA6AF, #1A4549);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-top: 5rem;
 }
 
 .container_slider {
@@ -234,6 +234,9 @@ img.displaySlide{
     border-color: #5372F0;
 }
 
+.actualite{
+    margin-bottom: 5rem;
+}
 /* ================= CARD ITEMS ================= */
 .card_list .card_item {
     list-style: none;
@@ -263,6 +266,10 @@ img.displaySlide{
     margin-top: -35px;
 }
 
+.join{
+    margin-bottom: 2rem;
+}
+
 .join_links{
     display: flex;
     width:100%;
@@ -283,9 +290,9 @@ img.displaySlide{
 }
 
 .button_links button{
-    height: 52px;
-    width: 150px;
-    border-radius: 15px;
+    height: 72px;
+    width: 250px;
+    border-radius: 25px;
     background-color: #A4C7FC;
 
 }
@@ -332,6 +339,30 @@ footer {
 
 
 @media screen and (max-width: 1118px) {
+
+    .button_links button{
+        height: 40px;
+        width: 150px;
+
+    }
+
+    .actualite{
+        margin-bottom: 2rem;
+    }
+
+    .join_links{
+        font-size: 2em;
+    }
+
+    section h2{
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    .carrousel_title{
+        margin-top: 2rem;
+    }
+
     .page_title {
         margin: auto;
         font-size: 1.5em;
@@ -385,7 +416,7 @@ footer {
         width: 100%;
     }
     .container_2 p {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .map img {
@@ -497,6 +528,10 @@ footer {
         margin-inline: auto;
     }
 
+    .container_2 p{
+        font-size: 1em;
+    }
+
     .nav {
         height: calc(var(--header-height) + 2rem);
         display: flex;
@@ -555,4 +590,3 @@ footer {
     }
 
 }
-
