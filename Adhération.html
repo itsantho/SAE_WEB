@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="Adhération.css">
+    <link rel="stylesheet" href="Adhésion.css">
 
-    <title>Responsive dropdown menu - Bedimcode</title>
+    <title>Page d'adhération</title>
 </head>
+
 <body>
-<!--=============== HEADER ===============-->
+<!--=============== HEADER & NAV ===============-->
 <header class="header">
-    <div class="banner">
+    <div class="nav_background">
         <nav class="nav container">
             <div class="nav__data">
                 <a href="#" class="nav__logo">ASFC</a>
@@ -25,7 +26,6 @@
                     <i class="ri-close-line nav__close"></i>
                 </div>
             </div>
-
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -62,6 +62,7 @@
                             </li>
                         </ul>
                     </li>
+
 
                     <li class="dropdown__item">
                         <div class="nav__link">
@@ -119,15 +120,198 @@
                 </ul>
             </div>
         </nav>
-
-        <div>
-            <h1 class="banner-container"> Nouvelle adhération </h1>
-            <P class="banner-paragraph"> Remarque : Pour tous les adhérents autre que France métropolitaine, les documents seront envoyés uniquement par email.</P>
-        </div>
     </div>
 </header>
 
+<div class="banner">
+    <div class="banner-container">
+        <h1 class="page_title"> Nouvelle adhération </h1>
+        <P class="banner-paragraph"> Remarque : Pour tous les adhérents autre que France métropolitaine, les documents seront envoyés uniquement par email.</P>
+    </div>
+</div>
+
+<div>
+    <!--=============== formulaire_1 ===============-->
+    <div class="container_form">
+        <div class="title"> Information Adhérent
+        </div>
+        <div class="content">
+            <form action="#">
+                <div class="info_user">
+
+                    <div class="box">
+                        <span class="details"> Nom : </span>
+                        <input type="text" placeholder=" Entrez votre nom " required>
+                    </div>
+
+                    <div class="box">
+                        <div class="gender-details">
+                            <!-- Radio buttons for gender selection -->
+                            <input type="radio" name="gender" id="dot-1">
+                            <input type="radio" name="gender" id="dot-2">
+                            <input type="radio" name="gender" id="dot-3">
+                            <span class="gender-title"> Civilité :</span>
+                            <div class="category">
+                                <!-- Label for Male -->
+                                <label for="dot-1">
+                                    <span class="dot one"></span>
+                                    <span class="gender">Homme</span>
+                                </label>
+                                <!-- Label for Female -->
+                                <label for="dot-2">
+                                    <span class="dot two"></span>
+                                    <span class="gender">Femme</span>
+                                </label>
+                                <!-- Label for Prefer not to say -->
+                                <label for="dot-3">
+                                    <span class="dot three"></span>
+                                    <span class="gender"> Ne pas le dire</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <span class="details"> Prénom :</span>
+                        <input type="text" placeholder=" Entrez votre prénom" required>
+                    </div>
+
+                    <div class="box">
+                        <span class="details"> Date de naissance : </span>
+                        <input type="date" required>
+                    </div>
+
+
+                    <div class="box">
+                        <span class="details"> Adresse :</span>
+                        <input type="text" placeholder=" Entrez votre adresse " required>
+                    </div>
+
+                    <div class="box">
+                        <span class="details"> Adresse2 :</span>
+                        <input type="text" placeholder=" Entrez votre adresse" required>
+                    </div>
+
+                    <div class="box_supadress">
+                        <span class="details"> Code postal :</span>
+                        <input type="text" placeholder=" Entrez votre code postal " required>
+                    </div>
+
+                    <div class="box_supadress">
+                        <span class="details"> Ville :</span>
+                        <input type="text" placeholder=" Entrez votre ville " required>
+                    </div>
+
+                    <div class="box_supadress">
+                        <span class="details"> Pays :</span>
+                        <input type="text" placeholder=" Entrez votre pays" required>
+                    </div>
+
+                    <div class="box">
+                        <span class="details"> Téléphone :</span>
+                        <input type="text" placeholder=" Entrez votre numéros" required>
+                    </div>
+
+                    <div class="box">
+                        <span class="details"> Email :</span>
+                        <input type="text" placeholder=" Entrez votre email" required>
+                    </div>
+
+                    <div class="box">
+                        <span class="details"> Profession :</span>
+                        <input type="text" placeholder=" Entrez votre profession" required>
+                    </div>
+
+                    <div class="box">
+                        <span class="details"> Activité actuelle :</span>
+                        <input type="text" placeholder=" Entrez votre activité" required>
+                    </div>
+
+                    <div class="box">
+                        <div class="maladie-details">
+                            <!-- Radio buttons for gender selection -->
+                            <input type="radio" name="maladie" id="dot-4">
+                            <input type="radio" name="maladie" id="dot-5">
+                            <span class="maladie-title"> Souffre du :</span>
+                            <div class="category">
+                                <!-- Label for Male -->
+                                <label for="dot-4">
+                                    <span class="dot four"></span>
+                                    <span class="gender">SFC</span>
+                                </label>
+                                <!-- Label for Female -->
+                                <label for="dot-5">
+                                    <span class="dot five"></span>
+                                    <span class="gender">Autre</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <span class="details"> Souffre depuis : </span>
+                        <input type="text" placeholder=" Saisir un nombre d'année" required>
+                    </div>
+
+                    <div class="box">
+                        <span class="details"> Si autre préciser : </span>
+                        <input type="text" placeholder=" Autres " required>
+                    </div>
+
+                    <div class="box">
+                        <span class="details"> Comment avez-vous connu l'association : </span>
+                        <textarea class="textarea-style" placeholder="Écrivez ici..."></textarea>
+                    </div>
+                </div>
+            </form>
+
+            <hr>
+
+            <!--=============== formulaire_2 ===============-->
+            <div class="container_form_2">
+                <div class="title"> Mon compte ASFC</div>
+                <div class="content">
+                    <form>
+                        <div class="info_user_connection">
+                            <div class="box_2">
+                                <span class="details"> Pseudo :</span>
+                                <input type="text" placeholder=" Entrer votre nom" required>
+                            </div>
+
+                            <div class="box_2">
+                                <span class="details"> Mot de passe :  </span>
+                                <input type="password" placeholder=" Entrer votre nom" required>
+                            </div>
+
+                            <div class="box_2">
+                                <span class="details"> Confirmation :  </span>
+                                <input type="password" placeholder=" Entrer votre nom" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="mention" name="mention"/>
+                <label for="mention">En cochant cette case, je reconnais avoir pris connaissance des objectifs de l'association. Je m'engage à ne pas diffuser les documents de l'association sur Internet ou par photocopies, à respecter l'éthique et les règles de fonctionnement de l'association, et déclare vouloir y adhérer.
+                </label>
+            </div>
+
+            <div class="button_container">
+                <button class="button"> Valider </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer">
+        <p> Vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concernent, en vertu de l'art. 34 de la loi "Informatique et Libertés" du 6 janvier 1978.</p>
+    </div>
+</footer>
+
 <!--=============== MAIN JS ===============-->
-<script src="Adhération.js"></script>
+<script src="Adhésion.js"></script>
 </body>
 </html>
