@@ -80,7 +80,6 @@ section {
 article{
     text-align: center;
     max-width: 300px;
-
     margin-bottom: 5%;
     margin-top: 3%;
 }
@@ -219,6 +218,19 @@ a {
     .nav__list {
         background-color: #1B114D;
     }
+    h2{
+        text-align: center;
+    }
+    .article-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 700px;
+    }
+    footer p{
+        font-size: 18px;
+    }
 }
 
 .nav__link {
@@ -344,7 +356,6 @@ a {
 
 .inputBox-end{
     display: flex;
-
     justify-content: space-evenly;
 }
 .inputBox-end input{
@@ -447,5 +458,6 @@ section{
         pointer-events: initial;
         transition: top .3s;
     }
+
 
 }
