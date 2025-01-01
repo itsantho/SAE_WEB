@@ -184,6 +184,22 @@ a {
     opacity: 0;
 }
 
+.button{
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 1px; /* Bordure grise claire */
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 148px;
+    height: 34px;
+    text-decoration: none;
+}
+.button a{
+    color:white;
+}
+
 /* Navigation for mobile devices */
 @media screen and (max-width: 1118px) {
 
