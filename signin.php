@@ -3,7 +3,7 @@
 $host = 'localhost';
 $dbname = 'Formulaire';
 $username = 'root'; // Remplacez par votre utilisateur MariaDB
-$password = 'root'; // Laissez vide si vous utilisez XAMPP ou WAMP par défaut
+$password = 'root';
 
 try {
     // Connexion à MariaDB
@@ -12,7 +12,7 @@ try {
 
     // Traitement du formulaire
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $pseudo = $_POST['pseudo']; // Utiliser $pseudo au lieu de $user
+        $pseudo = $_POST['pseudo'];
         $password = $_POST['password'];
 
         // Rechercher l'utilisateur dans la base de données
@@ -22,11 +22,9 @@ try {
         $userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($userData && $password === $userData['mot_de_passe']) { // Utilisez mot_de_passe au lieu de password
-            echo "Connexion réussie. Bienvenue, " . htmlspecialchars($userData['pseudo'])  . "!"; // Afficher pseudo et pas username
+            header('Location: Enquete.html');
         } else {
             echo "Nom d'utilisateur ou mot de passe incorrect.";
-            echo $pseudo . $password;
-            echo $userData['mot_de_passe'];
         }
     }
 } catch (PDOException $e) {

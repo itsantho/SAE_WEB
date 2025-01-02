@@ -26,6 +26,10 @@
     }
 }
 
+body{
+    font-family: var(--body-font), serif;
+}
+
 * {
     margin: 0;
     padding: 0;

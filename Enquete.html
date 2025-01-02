@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Enquete.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <title>Enquête</title>
+</head>
+<header class="header">
+    <div class="nav_background">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="Accueil.html" class="nav__logo">ASFC</a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class=""><a href="Accueil.html" class="nav__link">ACCUEIL</a></li>
+
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            A PROPOS <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-user-heart-fill"></i> Qui sommes-nous ?
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-information-line"></i> Le SFC, la maladie
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-brain-line"></i> La douleur chronique
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-input-method-line"></i> Pacing
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            AIDE & RESSOURCES <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-article-line"></i> Documentation
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-draft-fill"></i> Démarches administratives
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-link"></i> Liens utiles
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-road-map-line"></i> Plan du site
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            ACTUALITES & EVENEMENTS <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-book-read-line"></i> Actualités
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-calendar-2-line"></i> Agenda
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            ESPACE ADHERENT<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="Identification.html" class="dropdown__link">
+                                    <i class="ri-user-follow-line"></i> Déjà adhérent !
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="Adhésion.html" class="dropdown__link">
+                                    <i class="ri-user-shared-2-line"></i> Adhérer
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#" class="nav__link">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<body>
+<div class="container_form">
+    <div class="title"> Enquête Adhérent :
+    </div>
+    <div class="content">
+        <form action="Enquete.php" method="post">
+            <div class="info_user">
+
+                <!--=============== Qui à répondu ? ===============-->
+                <div class="box">
+                    <label for="region">Choisissez votre région :</label>
+                    <select name="region" id="region" required>
+                        <option value="" disabled selected>-- Sélectionnez une région --</option>
+                        <option value="ile_de_france">Île-de-France</option>
+                        <option value="provence_alpes_cote_d_azur">Provence-Alpes-Côte d'Azur</option>
+                        <option value="nouvelle_aquitaine">Nouvelle-Aquitaine</option>
+                        <option value="occitanie">Occitanie</option>
+                        <option value="grand_est">Grand Est</option>
+                        <option value="bretagne">Bretagne</option>
+                        <option value="normandie">Normandie</option>
+                    </select>
+                </div>
+
+                <div class="box">
+                    <label for="age">Votre âge :</label>
+                    <input type="number" name="age" id="age" min="1" max="120" required placeholder="Entrez votre âge">
+                </div>
+                <!--=============== Lieu de vie ===============-->
+                <div class="box">
+                    <div class="habitation-details">
+                        <label for="habitation-select" class="habitation-title">Lieu de vie : </label>
+                        <select id="habitation-select" name="habitation" required>
+                            <option value="">-- Sélectionnez une option --</option>
+                            <option value="Famille en permanence">Dans la famille en permanence</option>
+                            <option value="Famille avec solution d'accueil">Dans la famille avec une solution d'accueil ou des activités en journée</option>
+                            <option value="Famille avec accueil temporaire">Dans la famille principalement mais avec un accueil temporaire ou séquentiel en établissement</option>
+                            <option value="Logement indépendant">Dans un logement indépendant</option>
+                            <option value="Habitat inclusif">Dans un habitat inclusif</option>
+                            <option value="Foyer accueil médicalisé">Dans un foyer d'accueil médicalisé (FAM)</option>
+                            <option value="Maison accueil spécialisé">Dans une maison d'accueil spécialisé (MAS)</option>
+                            <option value="Foyer de vie">Dans un foyer de vie ou foyer d'hébergement</option>
+                            <option value="IME internat">En IME avec internat</option>
+                            <option value="Hospitalisation psychiatrie">Hospitalisation en psychiatrie</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                </div>
+                <!--==== choix et adaptation ====-->
+                <div class="box">
+                    <div class="habitation-details"> <span class="habitation-title">Le lieu de vie correspond-il à une orientation CDAPH:</span>
+                        <!-- Boutons radio pour la sélection de l'orientation -->
+                        <input type="radio" name="orientation_CDAPH" id="dot-1" value="oui" required>
+                        <input type="radio" name="orientation_CDAPH" id="dot-2" value="non" required>
+                        <input type="radio" name="orientation_CDAPH" id="dot-3" value="null" required>
+                        <div class="category">
+                            <!-- Option oui -->
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="habitation">oui</span>
+                            </label>
+                            <!-- Option non -->
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="habitation">non</span>
+                            </label>
+                            <!-- Option pas d'orientation -->
+                            <label for="dot-3">
+                                <span class="dot three"></span>
+                                <span class="habitation">Pas d'orientation</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="habitation-details">
+                        <!-- Boutons radio pour si ça correspond aux choix de vie -->
+                        <input type="radio" name="lieu_choix" id="dot-4" value="oui" required>
+                        <input type="radio" name="lieu_choix" id="dot-5" value="non" required>
+
+                        <span class="habitation-title">Le lieu de vie correspond-il à vos choix ?</span>
+                        <div class="category">
+                            <!-- Option oui -->
+                            <label for="dot-4">
+                                <span class="dot four"></span>
+                                <span class="habitation">oui</span>
+                            </label>
+                            <!-- Option non -->
+                            <label for="dot-5">
+                                <span class="dot five"></span>
+                                <span class="habitation">non</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--=============== Activité professionnelles et insertion sociale ===============-->
+                <div class="box">
+                    <div class="activite-details">
+                        <label for="activite-select" class="activite-title">Activité professionnelle et insertion sociale :</label>
+                        <select id="activite-select" name="activite" required>
+                            <option value="">-- Sélectionnez une option --</option>
+                            <option value="Scolarité en milieu ordinaire">Scolarité en milieu ordinaire</option>
+                            <option value="Scolarité en dispositif spécialisé">
+                                Scolarité en dispositif spécialisé de l'Éducation Nationale
+                            </option>
+                            <option value="Instruction en Famille">Instruction en Famille</option>
+                            <option value="Scolarité médico-social">
+                                Scolarité dans un établissement médico-social (IME, IMPRO...)
+                            </option>
+                            <option value="Formation professionnelle">Formation professionnelle</option>
+                            <option value="Études supérieures">Études supérieures</option>
+                            <option value="Activité pro ordinaire">Activité professionnelle en milieu ordinaire</option>
+                            <option value="Activité pro protégé">
+                                Activité professionnelle en milieu protégé (ESAT, Entreprise adaptée)
+                            </option>
+                            <option value="Sans activité">Sans aucune activité scolaire ou professionnelle</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="qualite-vie-details">
+                        <label for="qualite-vie-select" class="qualite-vie-title">Qualité de vie :</label>
+                        <select id="qualite-vie-select" name="qualite_vie" required>
+                            <option value="">-- Sélectionnez une option --</option>
+                            <option value="Tout va bien">Tout va bien</option>
+                            <option value="Restriction de la vie sociale">Restriction de la vie sociale</option>
+                            <option value="Souffrance psychologique">Souffrance psychologique</option>
+                            <option value="Fatigue, épuisement">Fatigue, épuisement</option>
+                            <option value="Réduction d'activité professionnelle">
+                                Réduction d'activité professionnelle
+                            </option>
+                            <option value="Coûts financiers importants">Coûts financiers importants</option>
+                            <option value="Impact négatif sur la fratrie">Impact négatif sur la fratrie</option>
+                            <option value="Conflits familiaux">Conflits familiaux</option>
+                            <option value="Maladie ou difficulté pour le proche">Maladie ou difficulté pour le proche</option>
+                            <option value="Éloignement de la personne aidée">
+                                Éloignement de la personne aidée
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="besoins-adherent"> <span class="besoins-adherent">De quelle niveau d'assistance avez vous besoins ?</span>
+                        <!-- Boutons radio pour la sélection de l'orientation -->
+                        <input type="radio" name="besoins-adherent" id="dot-6" value="autonome" required>
+                        <input type="radio" name="besoins-adherent" id="dot-7" value="constant" required>
+                        <input type="radio" name="besoins-adherent" id="dot-8" value="ponctuelles" required>
+                        <input type="radio" name="besoins-adherent" id="dot-9" value="soutien-autonomie" required>
+                        <div class="category">
+                            <!-- Option oui -->
+                            <label for="dot-6">
+                                <span class="dot six"></span>
+                                <span class="habitation">Vous souhaitez être autonome</span>
+                            </label>
+                            <!-- Option non -->
+                            <label for="dot-7">
+                                <span class="dot seven"></span>
+                                <span class="habitation">Une aide pour tous les actes de la vie quotidienne et la présence d'une berce personne 24 heures sur 24</span>
+                            </label>
+                            <!-- Option pas d'orientation -->
+                            <label for="dot-8">
+                                <span class="dot eight"></span>
+                                <span class="habitation">Des interventions et stimulations ponctuelles mais quotidiennes (toilette, sorties, repas, communication..)</span>
+                            </label>
+                            <label for="dot-9">
+                                <span class="dot nine"></span>
+                                <span class="habitation">
+                                    Un soutien à l'autonomie pour le logement, l'accès à la santé. Les loisirs, les démarches administratives
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button_container">
+                <button class="button"> Valider </button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

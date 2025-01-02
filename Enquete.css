@@ -145,11 +145,12 @@ a {
 }
 
 /*=============== FORM 1 ===============*/
+
 .container_form {
     width: 100%;
+    margin-top: 100px;
     max-width: 800px;
     background-color: #EDF8FF;
-    margin-top: 10px;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -166,6 +167,7 @@ a {
 
 .info_user {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
@@ -279,14 +281,23 @@ a {
 /* habitation */
 form .habitation-details {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne les éléments au début horizontalement */
+    margin-bottom: 1rem;
 }
-
+.category {
+    display: flex;
+    flex-direction: column; /* Garde les boutons radio côte à côte */
+    gap: 1rem; /* Ajoute un espacement entre chaque option */
+    margin-top: 0.5rem;
+}
 form .habitation-title{
+
     margin-bottom: 0.5em;
 }
 
 form .habitation-details .category {
+
     gap: 15px;
 }
 

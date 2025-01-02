@@ -19,7 +19,7 @@
     <div class="nav_background">
         <nav class="nav container">
             <div class="nav__data">
-                <a href="Accueil.html" class="nav__logo">ASFC</a>
+                <a href="#" class="nav__logo">ASFC</a>
 
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line nav__burger"></i>
@@ -145,7 +145,7 @@
 
 <div class="banner">
     <div class="banner-container">
-        <h1 class="page_title"> Nouvelle adhération </h1>
+        <h1 class="page_title"> Nouvelle adhésion </h1>
         <P class="banner-paragraph"> Remarque : Pour tous les adhérents autre que France métropolitaine, les documents seront envoyés uniquement par email.</P>
     </div>
 </div>
@@ -156,21 +156,21 @@
         <div class="title"> Information Adhérent
         </div>
         <div class="content">
-            <form action="#">
+            <form id="form_adherent" action="../app/Submit.php" method="POST">
                 <div class="info_user">
-
+                    <!-- Champs du formulaire -->
                     <div class="box">
                         <span class="details"> Nom : </span>
-                        <input type="text" placeholder=" Entrez votre nom " required>
+                        <input type="text" placeholder=" Entrez votre nom " name="nom" required>
                     </div>
 
                     <div class="box">
                         <div class="gender-details">
                             <!-- Radio buttons for gender selection -->
-                            <input type="radio" name="gender" id="dot-1">
-                            <input type="radio" name="gender" id="dot-2">
-                            <input type="radio" name="gender" id="dot-3">
-                            <span class="gender-title"> Civilité :</span>
+                            <input type="radio" name="gender" id="dot-1" value="Homme" required>
+                            <input type="radio" name="gender" id="dot-2" value="Femme">
+                            <input type="radio" name="gender" id="dot-3" value="Non précisé">
+                            <span class="gender-title">Civilité :</span>
                             <div class="category">
                                 <!-- Label for Male -->
                                 <label for="dot-1">
@@ -185,73 +185,73 @@
                                 <!-- Label for Prefer not to say -->
                                 <label for="dot-3">
                                     <span class="dot three"></span>
-                                    <span class="gender"> Ne pas le dire</span>
+                                    <span class="gender">Non précisé</span>
                                 </label>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="box">
                         <span class="details"> Prénom :</span>
-                        <input type="text" placeholder=" Entrez votre prénom" required>
+                        <input type="text" placeholder=" Entrez votre prénom" name="prenom" required>
                     </div>
 
                     <div class="box">
                         <span class="details"> Date de naissance : </span>
-                        <input type="date" required>
+                        <input type="date"  name="dob" required>
                     </div>
-
 
                     <div class="box">
                         <span class="details"> Adresse :</span>
-                        <input type="text" placeholder=" Entrez votre adresse " required>
+                        <input type="text" placeholder=" Entrez votre adresse " name="adresse" required>
                     </div>
 
                     <div class="box">
                         <span class="details"> Adresse2 :</span>
-                        <input type="text" placeholder=" Entrez votre adresse" required>
+                        <input type="text" placeholder=" Entrez votre adresse" name="adresse2">
                     </div>
 
                     <div class="box_supadress">
                         <span class="details"> Code postal :</span>
-                        <input type="text" placeholder=" Entrez votre code postal " required>
+                        <input type="text" placeholder=" Entrez votre code postal " name="CP" required>
                     </div>
 
                     <div class="box_supadress">
                         <span class="details"> Ville :</span>
-                        <input type="text" placeholder=" Entrez votre ville " required>
+                        <input type="text" placeholder=" Entrez votre ville " name="city" required>
                     </div>
 
                     <div class="box_supadress">
                         <span class="details"> Pays :</span>
-                        <input type="text" placeholder=" Entrez votre pays" required>
+                        <input type="text" placeholder=" Entrez votre pays" name="pays" required>
                     </div>
 
                     <div class="box">
                         <span class="details"> Téléphone :</span>
-                        <input type="text" placeholder=" Entrez votre numéros" required>
+                        <input type="tel" placeholder=" Entrez votre numéros" name="numtel" required>
                     </div>
 
                     <div class="box">
                         <span class="details"> Email :</span>
-                        <input type="text" placeholder=" Entrez votre email" required>
+                        <input type="email" placeholder=" Entrez votre email" name="mail" required>
                     </div>
 
                     <div class="box">
                         <span class="details"> Profession :</span>
-                        <input type="text" placeholder=" Entrez votre profession" required>
+                        <input type="text" placeholder=" Entrez votre profession" name="job">
                     </div>
 
                     <div class="box">
                         <span class="details"> Activité actuelle :</span>
-                        <input type="text" placeholder=" Entrez votre activité" required>
+                        <input type="text" placeholder=" Entrez votre activité" name="activity">
                     </div>
 
                     <div class="box">
                         <div class="maladie-details">
                             <!-- Radio buttons for gender selection -->
-                            <input type="radio" name="maladie" id="dot-4">
-                            <input type="radio" name="maladie" id="dot-5">
+                            <input type="radio" name="maladie" id="dot-4" value="SFC">
+                            <input type="radio" name="maladie" id="dot-5" value="autre">
                             <span class="maladie-title"> Souffre du :</span>
                             <div class="category">
                                 <!-- Label for Male -->
@@ -270,58 +270,53 @@
 
                     <div class="box">
                         <span class="details"> Souffre depuis : </span>
-                        <input type="text" placeholder=" Saisir un nombre d'année" required>
+                        <input type="text" placeholder=" Saisir un nombre d'année" name="annee" required>
                     </div>
 
                     <div class="box">
                         <span class="details"> Si autre préciser : </span>
-                        <input type="text" placeholder=" Autres " required>
+                        <input type="text" placeholder=" Autres " name="autres">
                     </div>
 
                     <div class="box">
                         <span class="details"> Comment avez-vous connu l'association : </span>
-                        <textarea class="textarea-style" placeholder="Écrivez ici..."></textarea>
+                        <textarea class="textarea-style" placeholder="Écrivez ici..." NAME="connaissance"></textarea>
                     </div>
                 </div>
-            </form>
 
-            <hr>
-
-            <!--=============== formulaire_2 ===============-->
-            <div class="container_form_2">
-                <div class="title"> Mon compte ASFC</div>
-                <div class="content">
-                    <form>
+                <div class="container_form_2">
+                    <div class="title"> Mon compte ASFC
+                    </div>
+                    <div class="content">
                         <div class="info_user_connection">
                             <div class="box_2">
                                 <span class="details"> Pseudo :</span>
-                                <input type="text" placeholder=" Entrer votre nom" required>
+                                <input type="text" placeholder=" Entrer votre pseudo" name="pseudo" required>
                             </div>
 
                             <div class="box_2">
                                 <span class="details"> Mot de passe :  </span>
-                                <input type="password" placeholder=" Entrer votre nom" required>
+                                <input type="password" placeholder=" Entrer votre mot de passe" name="mdp" required>
                             </div>
 
                             <div class="box_2">
                                 <span class="details"> Confirmation :  </span>
-                                <input type="password" placeholder=" Entrer votre nom" required>
+                                <input type="password" placeholder=" Confirmer votre mot de passe" name="cmdp"required>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
+                <div class="check">
+                    <input type="checkbox" id="mention" name="mention" required />
+                    <label for="mention">En cochant cette case, je reconnais avoir pris connaissance des objectifs de l'association. Je m'engage à ne pas diffuser les documents de l'association sur Internet ou par photocopies, à respecter l'éthique et les règles de fonctionnement de l'association, et déclare vouloir y adhérer.</label>
+                </div>
 
-            <div class="check">
-                <input type="checkbox" id="mention" name="mention"/>
-                <label for="mention">En cochant cette case, je reconnais avoir pris connaissance des objectifs de l'association. Je m'engage à ne pas diffuser les documents de l'association sur Internet ou par photocopies, à respecter l'éthique et les règles de fonctionnement de l'association, et déclare vouloir y adhérer.
-                </label>
-            </div>
-
-            <div class="button_container">
-                <button class="button"> Valider </button>
-            </div>
+                <div class="button_container">
+                    <button type="button" class="button" id="valider_button"> Valider </button>
+                </div>
+            </form>
         </div>
+
     </div>
 </div>
 
