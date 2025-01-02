@@ -1,0 +1,19 @@
+{
+    "name": "projet/signup",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Projet\\Signup\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "wangs",
+            "email": "shihong.wang@etu.u-paris.fr"
+        }
+    ],
+
+    "require": {
+        "ext-pdo": "*"
+    }
+}
