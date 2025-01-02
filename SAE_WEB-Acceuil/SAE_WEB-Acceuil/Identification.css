@@ -42,6 +42,7 @@
     background-size: cover;
 }
 
+
 .banner-container{
     margin: 50px;
     font-size: 40px;
@@ -59,23 +60,19 @@
 
 section {
     display: flex;
-    gap: 14px;
-    margin-left: 50px;
+
     flex-direction: column;
+    max-width: 100%;
 }
 .content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
-
 }
 
 .article-container{
     display: flex;
     justify-content: space-around;
-    gap: 48px;
-
 }
 article{
     text-align: center;
@@ -229,7 +226,7 @@ a {
         width: 700px;
     }
     footer p{
-        font-size: 18px;
+        font-size: 11px;
     }
 }
 
@@ -394,7 +391,9 @@ section{
     .nav__link {
         padding-inline: 1rem;
     }
-
+    footer p{
+        font-size: 28px;
+    }
 }
 
 /* For large devices */
