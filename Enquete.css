@@ -389,19 +389,22 @@ form .mention_legal .category .square{
     margin-bottom: 1rem;
 }
 
-.button_container{
+/* === INPUT VALIDER FORMULAIRE === */
+.inputBox-end{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.button{
-    width: 15%;
-    height: 35px;
-    background-color: black;
+.inputBox-end input{
+    border: 1px; /* Bordure grise claire */
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 148px;
+    height: 34px;
     color: white;
-    text-align: center;
-    border-radius: 30px;
+    background-color: black;
+
 }
 
 footer{
