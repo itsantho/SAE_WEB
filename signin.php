@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Configuration de la base de données
 $host = 'localhost';
 $dbname = 'Formulaire';
@@ -21,7 +22,10 @@ try {
         $stmt->execute();
         $userData = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($userData && $password === $userData['mot_de_passe']) { // Utilisez mot_de_passe au lieu de password
+        if ($userData && $password === $userData['mot_de_passe']) {
+            // Stocker l'ID utilisateur dans la session
+            $_SESSION['id_utilisateur'] = $userData['id'];
+            // Utilisez mot_de_passe au lieu de password
             header('Location: Enquete.html');
         } else {
             echo "Nom d'utilisateur ou mot de passe incorrect.";

@@ -1,4 +1,14 @@
 <?php
+session_start();
+
+// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION['id_utilisateur'])) {
+    header('Location: signin.php');
+    exit;
+}
+
+$id_utilisateur = $_SESSION['id_utilisateur'];
+
 $host = 'localhost';
 $username = 'root'; // À modifier avec votre utilisateur MariaDB
 $password = 'root'; // À modifier avec votre mot de passe MariaDB
@@ -23,8 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $besoins_adherent = $conn->real_escape_string($_POST['besoins-adherent']);
 
     // Préparation et exécution de la requête SQL
-    $sql = "INSERT INTO reponses (region, age, habitation, orientation_CDAPH, lieu_choix, activite, qualite_vie, besoins_adherent)
-            VALUES ('$region', $age, '$habitation', '$orientation_CDAPH', '$lieu_choix', '$activite', '$qualite_vie', '$besoins_adherent')";
+    $sql = "INSERT INTO reponses (idUtilisateur,region, age, habitation, orientation_CDAPH, lieu_choix, activite, qualite_vie, besoins_adherent)
+            VALUES ('$id_utilisateur','$region', $age, '$habitation', '$orientation_CDAPH', '$lieu_choix', '$activite', '$qualite_vie', '$besoins_adherent')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Les réponses ont été enregistrées avec succès.";
