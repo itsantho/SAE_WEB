@@ -149,13 +149,18 @@
     <div class="banner-text">
         <h1 class="banner-container">Bienvenu sur l'espace Adhérent</h1>
         <p>Vous êtes connecté en tant qu'utilisateur ID : <?php echo $_SESSION['id_utilisateur']; ?></p>
+        <form action="logout.php" method="post">
+            <button type="submit">Déconnexion</button>
+        </form>
     </div>
 </div>
 <div class="enquetebox">
     <div class="enquetetext">
         <h1>Enquête adhérents :</h1>
         <p>Dans le cadre de l'optimisation de l'accompagnement de nos membres nous vous invitons à répondre à un formulaire afin d'évaluer au mieux vos besoin</p>
-        <button onclick="window.location.href='Enquete.html';">Repondre a l'enquete</button>
+        <form action="Enquete.php" method="get">
+            <button type="submit">Accéder à l'enquête</button>
+        </form>
     </div>
 </div>
 

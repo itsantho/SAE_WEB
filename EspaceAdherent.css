@@ -69,6 +69,19 @@ body{
     font-weight: bold;
     color: #000237 ;
 }
+.banner-text button{
+    height: 40px;
+    width: 120px;
+    border-radius: 25px;
+    font-family: "Montserrat";
+    color: white;
+    background-color: #0056b3;
+}
+
+.banner-text button:hover{
+    background-color: #A4C7FC;
+    color:black;
+}
 
 .banner-image{
     width: 200px; /* Ajuste la taille de l'image selon tes besoins */
@@ -217,6 +230,7 @@ footer {
     }
 
     .banner-image{
+        display: none;
         width: 100%; /* Laisse l'image s'adapter à la largeur de l'écran */
         max-width: 300px; /* Limite la taille maximale de l'image */
     }
