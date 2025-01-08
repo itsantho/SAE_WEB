@@ -279,7 +279,7 @@ a {
 
 /*=============== habitation AND besoins===============*/
 /* habitation */
-form .habitation-details {
+form .maladie-details {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Aligne les éléments au début horizontalement */
@@ -291,17 +291,17 @@ form .habitation-details {
     gap: 1rem; /* Ajoute un espacement entre chaque option */
     margin-top: 0.5rem;
 }
-form .habitation-title{
+form .maladie-title{
 
     margin-bottom: 0.5em;
 }
 
-form .habitation-details .category {
+form .maladie-details .category {
 
     gap: 15px;
 }
 
-form .habitation-details .category label {
+form .maladie-details .category label {
     display: flex;
     align-items: center;
 }
@@ -313,9 +313,7 @@ form .besoins-adherent {
     flex-direction: column;
 }
 
-form .maladie-title{
-    margin-bottom: 0.5em;
-}
+
 
 form .besoins-adherent .category {
     margin-top: 10px;
@@ -330,7 +328,7 @@ form input[type="radio"] {
 }
 
 /* Boutons radio */
-form .habitation-details  .dot {
+form .maladie-details  .dot {
     height: 18px;
     width: 18px;
     background: #7D92FD;
@@ -368,11 +366,11 @@ form .besoins-adherent .dot {
 }
 
 /* Assure que les options de genre s'affichent correctement */
-form .habitation-details .category .one,
-form .habitation-details .category .two,
-form .habitation-details .category .three,
-form .habitation-details .category .four,
-form .habitation-details .category .five,
+form .maladie-details .category .one,
+form .maladie-details .category .two,
+form .maladie-details .category .three,
+form .maladie-details .category .four,
+form .maladie-details .category .five,
 form .besoins-adherent .category .six,
 form .besoins-adherent .category .seven,
 form .besoins-adherent .category .eight,

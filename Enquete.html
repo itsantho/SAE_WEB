@@ -166,8 +166,8 @@
                 </div>
                 <!--=============== Lieu de vie ===============-->
                 <div class="box">
-                    <div class="habitation-details">
-                        <label for="habitation-select" class="habitation-title">Lieu de vie : </label>
+                    <div class="maladie-details">
+                        <label for="habitation-select" class="maladie-title">Lieu de vie : </label>
                         <select id="habitation-select" name="habitation" required>
                             <option value="">-- Sélectionnez une option --</option>
                             <option value="Logement famillial ">Logement famillial </option>
@@ -181,11 +181,11 @@
                 </div>
                 <!--==== choix et adaptation ====-->
                 <div class="box">
-                    <div class="habitation-details"> <span class="habitation-title">Le lieu de vie correspond-il à une orientation CDAPH:</span>
+                    <div class="maladie-details"> <span class="maladie-title">Les syndromes de la fatigue chronique vous impact-il dans votre vie personnelle ?</span>
                         <!-- Boutons radio pour la sélection de l'orientation -->
-                        <input type="radio" name="orientation_CDAPH" id="dot-1" value="oui" required>
-                        <input type="radio" name="orientation_CDAPH" id="dot-2" value="non" required>
-                        <input type="radio" name="orientation_CDAPH" id="dot-3" value="null" required>
+                        <input type="radio" name="impact-perso" id="dot-1" value="oui" required>
+                        <input type="radio" name="impact-perso" id="dot-2" value="non" required>
+
                         <div class="category">
                             <!-- Option oui -->
                             <label for="dot-1">
@@ -197,21 +197,16 @@
                                 <span class="dot two"></span>
                                 <span class="habitation">non</span>
                             </label>
-                            <!-- Option pas d'orientation -->
-                            <label for="dot-3">
-                                <span class="dot three"></span>
-                                <span class="habitation">Pas d'orientation</span>
-                            </label>
                         </div>
                     </div>
                 </div>
                 <div class="box">
-                    <div class="habitation-details">
+                    <div class="maladie-details">
                         <!-- Boutons radio pour si ça correspond aux choix de vie -->
-                        <input type="radio" name="lieu_choix" id="dot-4" value="oui" required>
-                        <input type="radio" name="lieu_choix" id="dot-5" value="non" required>
+                        <input type="radio" name="impact-pro" id="dot-4" value="oui" required>
+                        <input type="radio" name="impact-pro" id="dot-5" value="non" required>
 
-                        <span class="habitation-title">Le lieu de vie correspond-il à vos choix ?</span>
+                        <span class="maladie-title">Les syndromes de la fatigue chronique vous impact-il dans votre vie professionnelle ?</span>
                         <div class="category">
                             <!-- Option oui -->
                             <label for="dot-4">
